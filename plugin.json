@@ -6,7 +6,7 @@
     "description": "Shows a map of a Minecraft world and removes unused chunks, like MCA Selector",
     "category": "plugin",
     "url": "https://github.com/FreshDoktor/Pelican-WorldTrimmer",
-    "update_url": null,
+    "update_url": "https://hub.pelican.dev/plugins/minecraft-world-trimmer/update.json",
     "namespace": "FreshDoktor\\MinecraftWorldTrimmer",
     "class": "MinecraftWorldTrimmerPlugin",
     "panels": [
