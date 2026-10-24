@@ -2,7 +2,7 @@
     "id": "minecraft-world-trimmer",
     "name": "Minecraft World Trimmer",
     "author": "FreshDoktor",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Shows a map of a Minecraft world and removes unused chunks, like MCA Selector",
     "category": "plugin",
     "url": "https://github.com/FreshDoktor/Pelican-WorldTrimmer",

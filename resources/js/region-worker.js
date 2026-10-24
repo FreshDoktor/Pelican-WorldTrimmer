@@ -446,8 +446,21 @@ class LegacySection {
     }
 }
 
+/**
+ * Name of a palette entry. Up to 1.21 a block is { Name, Properties } and a biome a string. Since 26.1
+ * lists may mix types: a block is { id, properties }, or just its name, which NBT stores as a
+ * compound holding the name under an empty key.
+ */
+function entryName(entry) {
+    if (typeof entry === 'string') {
+        return entry;
+    }
+
+    return entry?.Name ?? entry?.id ?? entry?.[''] ?? null;
+}
+
 function paletteInfos(palette) {
-    return (palette || []).map((entry) => blockInfo(typeof entry === 'string' ? entry : entry?.Name ?? 'minecraft:air'));
+    return (palette || []).map((entry) => blockInfo(entryName(entry) ?? 'minecraft:air'));
 }
 
 /** The sections of a chunk from the highest down, plus its values, in every format since 1.9. */
@@ -462,7 +475,7 @@ function readChunk(nbt) {
 
         if (raw.block_states) {
             sections.push(new Section(y, paletteInfos(raw.block_states.palette), raw.block_states.data ?? null,
-                raw.biomes?.palette ?? null, raw.biomes?.data ?? null, false));
+                raw.biomes?.palette?.map(entryName) ?? null, raw.biomes?.data ?? null, false));
         } else if (raw.Palette) {
             sections.push(new Section(y, paletteInfos(raw.Palette), raw.BlockStates ?? null, null, null, spanning));
         } else if (raw.Blocks instanceof Uint8Array && raw.Blocks.length >= 4096) {
