@@ -1,0 +1,77 @@
+<?php
+
+return [
+    'navigation_label' => 'World Trimmer',
+    'title' => 'World Trimmer',
+
+    // Texts of the map, used by its script.
+    'map' => [
+        'loading' => 'Loading the world…',
+        'no_world' => 'No world found. Start the server once so it creates its world.',
+        'load_failed' => 'The world could not be loaded. Is the node reachable?',
+        'dimensions' => [
+            'minecraft:overworld' => 'Overworld',
+            'minecraft:the_nether' => 'Nether',
+            'minecraft:the_end' => 'The End',
+        ],
+        'modes' => [
+            'map' => 'Map',
+            'inhabited' => 'Time played',
+            'saved' => 'Last saved',
+        ],
+        'legend' => [
+            'inhabited' => ['under 1 min', '10 h and more'],
+            'saved' => ['a year ago', 'today'],
+        ],
+        'fit' => 'Whole world',
+        'load_all' => 'Load all regions',
+        'regions_loaded' => ':loaded of :total regions loaded',
+        'help' => 'Drag to move, scroll to zoom. Click a chunk to select it (zoomed out: a whole region), Shift + drag selects an area, Ctrl + drag deselects one.',
+        'hover' => [
+            'block' => 'Block',
+            'chunk' => 'Chunk',
+            'inhabited' => 'played',
+            'saved' => 'saved',
+            'partial' => 'not fully generated',
+        ],
+        'states' => [
+            'none' => 'no region',
+            'loading' => 'loading…',
+            'missing' => 'not generated',
+            'generated' => 'generated',
+            'unreadable' => 'can\'t be shown',
+        ],
+        'server_running_hint' => 'The server is running. Chunks can only be removed while it is stopped, and the map may miss what it hasn\'t saved yet.',
+        'selection_title' => 'Selection',
+        'selection' => ':chunks chunks in :regions regions',
+        'clear_selection' => 'Clear',
+        'invert_selection' => 'Invert',
+        'delete_selection' => 'Remove selected chunks',
+        'no_permission' => 'You may look at the map, removing chunks needs the permissions to change and delete files.',
+        'filter_title' => 'Select by time played',
+        'filter_minutes' => 'Played less than (minutes)',
+        'filter_keep' => 'Keep everything within this radius (blocks) around X / Z, e.g. the spawn:',
+        'filter_radius' => 'Radius',
+        'filter_apply' => 'Add to selection',
+        'filter_applied' => ':count chunks selected',
+        'filter_partial' => 'Only loaded regions are filtered. Load all regions first to include the whole world.',
+        'confirm_title' => 'Remove chunks?',
+        'confirm_body' => ':chunks chunks in :regions regions are removed, together with their entities and points of interest. Minecraft generates them anew once they are visited again, with the generator it uses now. This can\'t be undone.',
+        'confirm_backup' => 'I have a backup of the world',
+        'confirm_button' => 'Remove',
+        'cancel' => 'Cancel',
+        'server_running' => 'Stop the server first, it would overwrite the changes otherwise.',
+        'trimming_title' => 'Removing chunks…',
+        'trimming' => ':done of :total regions done',
+        'trim_done' => ':count chunks removed, :size freed',
+        'trim_failed' => 'Removing chunks failed',
+    ],
+
+    'errors' => [
+        'invalid_region' => 'That is not a region file.',
+        'server_running' => 'Stop the server first, it would overwrite the changes otherwise.',
+        'busy' => 'Chunks of this server are being removed already, try again in a moment.',
+        'region_too_large' => 'The region file is larger than :size MB, the panel doesn\'t load files that large (WORLD_TRIMMER_MAX_REGION_SIZE_MB).',
+        'unexpected' => 'Something went wrong, see the log of the panel.',
+    ],
+];

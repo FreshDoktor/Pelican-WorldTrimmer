@@ -1,0 +1,77 @@
+<?php
+
+return [
+    'navigation_label' => 'World Trimmer',
+    'title' => 'World Trimmer',
+
+    // Texte der Karte, genutzt von ihrem Skript.
+    'map' => [
+        'loading' => 'Welt wird geladen…',
+        'no_world' => 'Keine Welt gefunden. Starte den Server einmal, damit er seine Welt anlegt.',
+        'load_failed' => 'Die Welt konnte nicht geladen werden. Ist die Node erreichbar?',
+        'dimensions' => [
+            'minecraft:overworld' => 'Oberwelt',
+            'minecraft:the_nether' => 'Nether',
+            'minecraft:the_end' => 'End',
+        ],
+        'modes' => [
+            'map' => 'Karte',
+            'inhabited' => 'Spielzeit',
+            'saved' => 'Zuletzt gespeichert',
+        ],
+        'legend' => [
+            'inhabited' => ['unter 1 Min.', '10 Std. und mehr'],
+            'saved' => ['vor einem Jahr', 'heute'],
+        ],
+        'fit' => 'Ganze Welt',
+        'load_all' => 'Alle Regionen laden',
+        'regions_loaded' => ':loaded von :total Regionen geladen',
+        'help' => 'Ziehen verschiebt, Scrollen zoomt. Klick wählt einen Chunk aus (weit herausgezoomt: eine ganze Region), Shift + Ziehen wählt einen Bereich aus, Strg + Ziehen hebt die Auswahl eines Bereichs auf.',
+        'hover' => [
+            'block' => 'Block',
+            'chunk' => 'Chunk',
+            'inhabited' => 'gespielt',
+            'saved' => 'gespeichert',
+            'partial' => 'nicht vollständig generiert',
+        ],
+        'states' => [
+            'none' => 'keine Region',
+            'loading' => 'lädt…',
+            'missing' => 'nicht generiert',
+            'generated' => 'generiert',
+            'unreadable' => 'kann nicht angezeigt werden',
+        ],
+        'server_running_hint' => 'Der Server läuft. Chunks lassen sich nur entfernen, während er gestoppt ist, und der Karte fehlt eventuell, was er noch nicht gespeichert hat.',
+        'selection_title' => 'Auswahl',
+        'selection' => ':chunks Chunks in :regions Regionen',
+        'clear_selection' => 'Leeren',
+        'invert_selection' => 'Umkehren',
+        'delete_selection' => 'Ausgewählte Chunks entfernen',
+        'no_permission' => 'Du kannst dir die Karte ansehen. Zum Entfernen von Chunks brauchst du die Rechte, Dateien zu ändern und zu löschen.',
+        'filter_title' => 'Nach Spielzeit auswählen',
+        'filter_minutes' => 'Weniger gespielt als (Minuten)',
+        'filter_keep' => 'Alles in diesem Radius (Blöcke) um X / Z behalten, z. B. den Spawn:',
+        'filter_radius' => 'Radius',
+        'filter_apply' => 'Zur Auswahl hinzufügen',
+        'filter_applied' => ':count Chunks ausgewählt',
+        'filter_partial' => 'Gefiltert werden nur geladene Regionen. Lade zuerst alle Regionen, um die ganze Welt einzubeziehen.',
+        'confirm_title' => 'Chunks entfernen?',
+        'confirm_body' => ':chunks Chunks in :regions Regionen werden entfernt, zusammen mit ihren Entities und POIs. Minecraft generiert sie neu, sobald sie wieder betreten werden, mit dem Generator, den es jetzt nutzt. Das lässt sich nicht rückgängig machen.',
+        'confirm_backup' => 'Ich habe ein Backup der Welt',
+        'confirm_button' => 'Entfernen',
+        'cancel' => 'Abbrechen',
+        'server_running' => 'Stoppe zuerst den Server, sonst überschreibt er die Änderungen.',
+        'trimming_title' => 'Chunks werden entfernt…',
+        'trimming' => ':done von :total Regionen erledigt',
+        'trim_done' => ':count Chunks entfernt, :size frei geworden',
+        'trim_failed' => 'Entfernen der Chunks fehlgeschlagen',
+    ],
+
+    'errors' => [
+        'invalid_region' => 'Das ist keine Region-Datei.',
+        'server_running' => 'Stoppe zuerst den Server, sonst überschreibt er die Änderungen.',
+        'busy' => 'Auf diesem Server werden gerade schon Chunks entfernt, versuche es gleich noch einmal.',
+        'region_too_large' => 'Die Region-Datei ist größer als :size MB, so große Dateien lädt das Panel nicht (WORLD_TRIMMER_MAX_REGION_SIZE_MB).',
+        'unexpected' => 'Etwas ist schiefgelaufen, siehe das Log des Panels.',
+    ],
+];
